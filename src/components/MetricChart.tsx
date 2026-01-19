@@ -30,7 +30,7 @@ const MetricChart: React.FC<MetricChartProps> = ({
     
     const formatXAxis = (tickItem: number) => {
         const date = new Date(tickItem * 1000);
-        return date.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+        return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     };
 
     const formatTooltip = (value: number) => {
@@ -75,7 +75,7 @@ const MetricChart: React.FC<MetricChartProps> = ({
                         <Tooltip 
                             contentStyle={{ backgroundColor: '#18181b', borderColor: '#27272a', borderRadius: '8px' }}
                             itemStyle={{ color: '#e4e4e7' }}
-                            labelFormatter={(label) => new Date(label * 1000).toLocaleString()}
+                            labelFormatter={(label) => new Date(label * 1000).toLocaleString('zh-CN')}
                             formatter={formatTooltip}
                         />
                         <Area 

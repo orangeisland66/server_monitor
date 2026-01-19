@@ -28,6 +28,8 @@ backend/obj/
 backend/bin/
 *.db
 backend/*.db
+*.db-wal
+*.db-shm
 
 # Packaging
 package/

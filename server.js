@@ -20,7 +20,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Frontend server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Frontend server running on http://0.0.0.0:${PORT}`);
     console.log(`Proxying API requests to ${API_URL}`);
 });

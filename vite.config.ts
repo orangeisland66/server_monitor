@@ -7,6 +7,7 @@ import { traeBadgePlugin } from 'vite-plugin-trae-solo-badge';
 export default defineConfig({
   server: {
     port: 23334,
+    host: '0.0.0.0',
     proxy: {
       '/api': {
         target: 'http://localhost:8080',
